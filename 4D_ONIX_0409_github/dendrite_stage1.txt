@@ -1,0 +1,10 @@
+python train.py --run_name "dendrite_stage1_v2" \
+  --load_path /home/dh524/data/4D_ONIX_0409/4D-ONIX-main/models/dataset/dendrite_2views.npy \
+  --n_views 2 --num_epochs 20 --batch_size 2 \
+  --num_random_rays 1024 --chunksize 4096 --num_coarse 128 \
+  --gpu_id 0 --use_time --no_shuffle_input \
+  --lambda_mse 100.0 --lambda_generator 0.0 \
+  --lr 0.0001 --lr_d 0.00005 --clip_max 10.0 \
+  --val_view_idx "0, 1" --val_idx 0 \
+  --print_loss_freq_iter 10 --save_plot_freq_epoch 1 \
+  --save_model_freq_epoch 5
